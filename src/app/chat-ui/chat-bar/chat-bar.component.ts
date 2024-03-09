@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,5 +10,13 @@ import { CommonModule } from '@angular/common';
 })
 export class ChatBarComponent {
   @Input() src:string = "";
-  @Input() who: string = ""
+  @Input() who: string = "";
+  @Output() query = new EventEmitter();
+
+  emitted() {
+    this.query.emit("input")
+  }
+  onPromptSubmit() {
+    this.emitted()
+  }
 }

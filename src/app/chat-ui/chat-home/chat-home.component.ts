@@ -16,4 +16,5 @@ export class ChatHomeComponent {
     this.prompt.run(pr);
     refcomp.value = "";
   }
+
 }
