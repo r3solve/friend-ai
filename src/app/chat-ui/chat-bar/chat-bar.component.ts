@@ -10,7 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class ChatBarComponent {
   @Input() src:string = "";
-  @Input() who: string = "";
+  who: string = "";
+  @Input() content: string = "";
   @Output() query = new EventEmitter();
 
   emitted() {

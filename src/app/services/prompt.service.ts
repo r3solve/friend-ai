@@ -12,12 +12,12 @@ export class PromptService {
     model = this.genAI.getGenerativeModel({ model: "gemini-pro"})
 
   constructor() { }
-    async run(pr:string) {
+    async run(pr:string):Promise<string> {
       const prompt = pr
       const result = await this.model.generateContent(prompt);
       const response = await result.response;
       const text = response.text();
-      console.log(text);
+      return text
 
 }
 
