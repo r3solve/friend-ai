@@ -2,4 +2,11 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
-@import './_variables';
+
+$primary: #0074d9;
+$danger: #ff4136;
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger
+);

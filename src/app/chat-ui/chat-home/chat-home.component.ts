@@ -25,14 +25,8 @@ export class ChatHomeComponent implements OnInit, AfterViewInit{
   async getPrompt(pr:string, refcomp:any) {
     this.createAndAppend(pr, "You");
     const answer = await this.prompt.run(pr);
-   
-    try {
-      refcomp.value = ""; 
-      this.createAndAppend(answer, "Bot")
-    }
-    catch (e) {
-      console.log(e)
-    }
+    refcomp.value = ""; 
+    this.createAndAppend(answer, "Bot")
 
     
 
