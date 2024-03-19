@@ -5,9 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { ChatUIModule } from './chat-ui/chatUI.module';
-import { AuthModule } from './auth/auth.module';
-
 
 @NgModule({
   declarations: [
@@ -17,8 +14,6 @@ import { AuthModule } from './auth/auth.module';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ChatUIModule,
-    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
